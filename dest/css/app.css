@@ -1,0 +1,673 @@
+@charset "UTF-8";
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+/* line 3, src/scss/_vendor/hamburger/_base.scss */
+.hamburger {
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  -o-transition-property: opacity, filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.35s;
+       -o-transition-duration: 0.35s;
+          transition-duration: 0.35s;
+  -webkit-transition-timing-function: linear;
+       -o-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+/* line 21, src/scss/_vendor/hamburger/_base.scss */
+.hamburger:hover {
+  opacity: 1;
+}
+
+/* line 31, src/scss/_vendor/hamburger/_base.scss */
+.hamburger-box {
+  width: 35px;
+  height: 19px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 38, src/scss/_vendor/hamburger/_base.scss */
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -1.5px;
+}
+
+/* line 43, src/scss/_vendor/hamburger/_base.scss */
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 35px;
+  height: 3px;
+  background-color: #030404;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+       -o-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+/* line 56, src/scss/_vendor/hamburger/_base.scss */
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+/* line 62, src/scss/_vendor/hamburger/_base.scss */
+.hamburger-inner::before {
+  top: -8px;
+}
+
+/* line 66, src/scss/_vendor/hamburger/_base.scss */
+.hamburger-inner::after {
+  bottom: -8px;
+}
+
+/*
+   * Squeeze
+   */
+/* line 6, src/scss/_vendor/hamburger/types/_squeeze.scss */
+.hamburger--squeeze .hamburger-inner {
+  -webkit-transition-duration: 0.075s;
+       -o-transition-duration: 0.075s;
+          transition-duration: 0.075s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+       -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* line 10, src/scss/_vendor/hamburger/types/_squeeze.scss */
+.hamburger--squeeze .hamburger-inner::before {
+  -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  -o-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+}
+
+/* line 15, src/scss/_vendor/hamburger/types/_squeeze.scss */
+.hamburger--squeeze .hamburger-inner::after {
+  -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* line 22, src/scss/_vendor/hamburger/types/_squeeze.scss */
+.hamburger--squeeze.is-active .hamburger-inner {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition-delay: 0.12s;
+       -o-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+       -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* line 27, src/scss/_vendor/hamburger/types/_squeeze.scss */
+.hamburger--squeeze.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  -o-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+}
+
+/* line 34, src/scss/_vendor/hamburger/types/_squeeze.scss */
+.hamburger--squeeze.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@font-face {
+  font-family: "iconFont";
+  src: url("../fonts/iconFont.eot");
+  src: url("../fonts/iconFont.eot?#iefix") format("eot"), url("../fonts/iconFont.woff2") format("woff2"), url("../fonts/iconFont.woff") format("woff"), url("../fonts/iconFont.ttf") format("truetype"), url("../fonts/iconFont.svg#iconFont") format("svg");
+}
+
+/* line 23, src/scss/_generated/_spriteFont.scss */
+.icon-down-arrow:before {
+  font-family: "iconFont", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* line 38, src/scss/_generated/_spriteFont.scss */
+.icon-down-arrow:before {
+  content: "";
+}
+
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("../fonts/GlacialIndifference-Bold.woff2") format("woff2"), url("../fonts/GlacialIndifference-Bold.woff") format("woff"), url("../fonts/GlacialIndifference-Bold.ttf") format("truetype"), url("../fonts/GlacialIndifference-Bold.svg#GlacialIndifference") format("svg");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GlacialIndifference";
+  src: url("../fonts/GlacialIndifference-Regular.woff2") format("woff2"), url("../fonts/GlacialIndifference-Regular.woff") format("woff"), url("../fonts/GlacialIndifference-Regular.ttf") format("truetype"), url("../fonts/GlacialIndifference-Regular.svg#GlacialIndifference") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff"), url("../fonts/Oswald-Regular.ttf") format("truetype"), url("../fonts/Oswald-Regular.svg#Oswald") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Stylish Classy Font";
+  src: url("../fonts/Stylish Classy Font.woff2") format("woff2"), url("../fonts/Stylish Classy Font.woff") format("woff"), url("../fonts/Stylish Classy Font.ttf") format("truetype"), url("../fonts/Stylish Classy Font.svg#Stylish Classy Font") format("svg");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* line 1, src/scss/_shared/_main-setting-reset.scss */
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* line 6, src/scss/_shared/_main-setting-reset.scss */
+html.is-hideScroll,
+body.is-hideScroll {
+  width: 100%;
+  overflow: hidden !important;
+}
+
+/* line 13, src/scss/_shared/_main-setting-reset.scss */
+html {
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 19, src/scss/_shared/_main-setting-reset.scss */
+body {
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  line-height: 1.42857143;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "GlacialIndifference", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 33, src/scss/_shared/_main-setting-reset.scss */
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+/* line 38, src/scss/_shared/_main-setting-reset.scss */
+body > .body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+/* line 44, src/scss/_shared/_main-setting-reset.scss */
+body > .body--start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* line 51, src/scss/_shared/_main-setting-reset.scss */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 54, src/scss/_shared/_main-setting-reset.scss */
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 61, src/scss/_shared/_main-setting-reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 71, src/scss/_shared/_main-setting-reset.scss */
+button,
+input {
+  overflow: visible;
+}
+
+/* line 77, src/scss/_shared/_main-setting-reset.scss */
+button[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* line 83, src/scss/_shared/_main-setting-reset.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* line 89, src/scss/_shared/_main-setting-reset.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 95, src/scss/_shared/_main-setting-reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 100, src/scss/_shared/_main-setting-reset.scss */
+p,
+h1, h2, h3, h4, h5, h6,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 108, src/scss/_shared/_main-setting-reset.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 113, src/scss/_shared/_main-setting-reset.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 119, src/scss/_shared/_main-setting-reset.scss */
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 124, src/scss/_shared/_main-setting-reset.scss */
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* line 131, src/scss/_shared/_main-setting-reset.scss */
+input[type="text"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* line 135, src/scss/_shared/_main-setting-reset.scss */
+picture {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, src/scss/_shared/_grid.scss */
+.c-grid, .c-grid-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* line 27, src/scss/_shared/_grid.scss */
+.c-grid-fluid {
+  max-width: 100%;
+}
+
+/* line 4, src/scss/_shared/_common.scss */
+.section__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1, src/scss/_shared/_iconFont.scss */
+.icon-font {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+}
+
+/* line 6, src/scss/_macros/_logotype.scss */
+.logo__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 11, src/scss/_macros/_logotype.scss */
+.logo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 3, src/scss/_components/_header.scss */
+.header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 30px 0;
+}
+
+/* line 11, src/scss/_components/_header.scss */
+.header__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 3, src/scss/_components/homepage/_main.scss */
+.main {
+  padding: 30px 30px 55px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+/* line 9, src/scss/_components/homepage/_main.scss */
+.main:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* line 19, src/scss/_components/homepage/_main.scss */
+.main__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 27, src/scss/_components/homepage/_main.scss */
+.main__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+/* line 33, src/scss/_components/homepage/_main.scss */
+.main__content > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 70px;
+}
+
+/* line 40, src/scss/_components/homepage/_main.scss */
+.main__content h4 {
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+/* line 48, src/scss/_components/homepage/_main.scss */
+.main__content h4:nth-of-type(1) {
+  color: #46c7dd;
+}
+
+/* line 51, src/scss/_components/homepage/_main.scss */
+.main__content h4:nth-of-type(2) {
+  color: #e7717d;
+}
+
+/* line 54, src/scss/_components/homepage/_main.scss */
+.main__content h4:nth-of-type(3) {
+  color: #d68162;
+}
+
+/* line 57, src/scss/_components/homepage/_main.scss */
+.main__content h4:nth-of-type(4) {
+  color: #8c994c;
+}
+
+/* line 62, src/scss/_components/homepage/_main.scss */
+.main__content h3 {
+  font-size: 16px;
+  color: #505050;
+  line-height: 1.1;
+}
+
+/* line 68, src/scss/_components/homepage/_main.scss */
+.main__content h1 {
+  font-size: 80px;
+  color: #505050;
+  font-weight: bold;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+/* line 78, src/scss/_components/homepage/_main.scss */
+.main__arrow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 83, src/scss/_components/homepage/_main.scss */
+.main__arrow span {
+  display: block;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-right: 2px solid #030404;
+  border-bottom: 2px solid #030404;
+  margin: 0 0 3px 4px;
+  width: 16px;
+  height: 16px;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation: mouse-scroll 1s infinite;
+          animation: mouse-scroll 1s infinite;
+}
+
+/* line 94, src/scss/_components/homepage/_main.scss */
+.main__arrow span:nth-of-type(1) {
+  margin-top: 1px;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+/* line 98, src/scss/_components/homepage/_main.scss */
+.main__arrow span:nth-of-type(2) {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  margin-top: -6px;
+}
+
+/* line 103, src/scss/_components/homepage/_main.scss */
+.main__arrow span:nth-of-type(3) {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  margin-top: -6px;
+}
+
+/* line 110, src/scss/_components/homepage/_main.scss */
+.main__arrow-wrapper {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=maps/app.css.map */

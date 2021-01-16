@@ -1,0 +1,20 @@
+---
+title: MIND
+
+pageClassName: p-home
+---
+extends shared/_layout
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    #pagepiling
+      //include components/homepage/_main
+
+
+      section.section#works.works
+      section.section#news.news
+      section.section#desc.desc
+      section.section#view.view
+      section.section#shop.shop
+      section.section#footer.footer
