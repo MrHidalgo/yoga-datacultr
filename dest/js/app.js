@@ -75,9 +75,7 @@ var initPreventBehavior = function initPreventBehavior() {
 	var pageFullHeight = function pageFullHeight() {
 		$('#pagepiling').pagepiling({
 			sectionSelector: '.section',
-			scrollingSpeed: 1000,
-			easing: 'swing',
-			css3: true
+			scrollingSpeed: 400
 		});
 	};
 
