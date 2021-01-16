@@ -203,8 +203,8 @@
 }
 
 @font-face {
-  font-family: "Stylish Classy Font";
-  src: url("../fonts/Stylish Classy Font.woff2") format("woff2"), url("../fonts/Stylish Classy Font.woff") format("woff"), url("../fonts/Stylish Classy Font.ttf") format("truetype"), url("../fonts/Stylish Classy Font.svg#Stylish Classy Font") format("svg");
+  font-family: "StylishClassyFont";
+  src: url("../fonts/StylishClassyFont.woff2") format("woff2"), url("../fonts/StylishClassyFont.woff") format("woff"), url("../fonts/StylishClassyFont.ttf") format("truetype"), url("../fonts/StylishClassyFont.svg#StylishClassyFont") format("svg");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
@@ -668,6 +668,86 @@ picture {
   100% {
     opacity: 1;
   }
+}
+
+/* line 3, src/scss/_components/homepage/_about.scss */
+.about {
+  background-color: rgba(238, 201, 183, 0.3);
+}
+
+/* line 6, src/scss/_components/homepage/_about.scss */
+.about__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+/* line 13, src/scss/_components/homepage/_about.scss */
+.about__content {
+  width: 100%;
+  max-width: 655px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 20, src/scss/_components/homepage/_about.scss */
+.about__line {
+  width: 3px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  background-color: #505050;
+}
+
+/* line 29, src/scss/_components/homepage/_about.scss */
+.about__title {
+  padding-bottom: 45px;
+  font-size: 40px;
+  color: #505050;
+}
+
+/* line 34, src/scss/_components/homepage/_about.scss */
+.about__title span {
+  font-family: 'StylishClassyFont', sans-serif;
+  font-size: 35px;
+}
+
+/* line 40, src/scss/_components/homepage/_about.scss */
+.about__slogan {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+/* line 49, src/scss/_components/homepage/_about.scss */
+.about__desc {
+  padding-bottom: 45px;
+  font-size: 25px;
+  color: #d68162;
+  font-weight: bold;
+}
+
+/* line 56, src/scss/_components/homepage/_about.scss */
+.about__subtitle {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  color: #505050;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /*# sourceMappingURL=maps/app.css.map */
