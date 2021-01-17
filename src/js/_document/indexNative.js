@@ -9,7 +9,11 @@
 	const pageFullHeight = () => {
 		$('#pagepiling').pagepiling({
 			sectionSelector: '.section',
-			scrollingSpeed: 400,
+			afterRender: function(){
+				setTimeout(() => {
+					$('#pagepiling').addClass('is-load');
+				}, 150);
+			}
 		});
 	};
 	
@@ -43,5 +47,8 @@
 		downArrow();
 		// ==========================================
 	};
-	initNative();
+	
+	window.addEventListener('load', (ev) => {
+		initNative();
+	}, false);
 })();

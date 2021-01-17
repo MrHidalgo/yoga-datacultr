@@ -75,7 +75,11 @@ var initPreventBehavior = function initPreventBehavior() {
 	var pageFullHeight = function pageFullHeight() {
 		$('#pagepiling').pagepiling({
 			sectionSelector: '.section',
-			scrollingSpeed: 400
+			afterRender: function afterRender() {
+				setTimeout(function () {
+					$('#pagepiling').addClass('is-load');
+				}, 150);
+			}
 		});
 	};
 
@@ -107,5 +111,8 @@ var initPreventBehavior = function initPreventBehavior() {
 		downArrow();
 		// ==========================================
 	};
-	initNative();
+
+	window.addEventListener('load', function (ev) {
+		initNative();
+	}, false);
 })();
