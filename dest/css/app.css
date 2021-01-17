@@ -1296,4 +1296,153 @@ picture {
           align-items: center;
 }
 
+/* line 3, src/scss/_components/homepage/_view.scss */
+.view {
+  background-color: #797672;
+}
+
+/* line 6, src/scss/_components/homepage/_view.scss */
+.view__bg {
+  opacity: 0.7;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/img-view@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+/* line 20, src/scss/_components/homepage/_view.scss */
+.view__wrapper {
+  z-index: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(192, 185, 177, 0.5);
+}
+
+/* line 29, src/scss/_components/homepage/_view.scss */
+.view__content {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+/* line 35, src/scss/_components/homepage/_view.scss */
+.view__title {
+  padding-bottom: 15px;
+  font-size: 35px;
+  font-family: "StylishClassyFont", sans-serif;
+  color: white;
+}
+
+/* line 42, src/scss/_components/homepage/_view.scss */
+.view__desc {
+  padding-bottom: 40px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+/* line 48, src/scss/_components/homepage/_view.scss */
+.view__line {
+  background-color: #ffffff;
+}
+
+/* line 51, src/scss/_components/homepage/_view.scss */
+.view__line-1 {
+  width: 2px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+/* line 59, src/scss/_components/homepage/_view.scss */
+.view__line-2 {
+  width: 130px;
+  height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+/* line 68, src/scss/_components/homepage/_view.scss */
+.view__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 72, src/scss/_components/homepage/_view.scss */
+.view__link a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+}
+
+/* line 82, src/scss/_components/homepage/_view.scss */
+.view__link a:hover:before, .view__link a:hover:after {
+  width: 50%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 89, src/scss/_components/homepage/_view.scss */
+.view__link a:before, .view__link a:after {
+  content: '';
+  position: absolute;
+  top: -webkit-calc(100% + 2px);
+  top: calc(100% + 2px);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* line 100, src/scss/_components/homepage/_view.scss */
+.view__link a:before {
+  left: 50%;
+}
+
+/* line 103, src/scss/_components/homepage/_view.scss */
+.view__link a:after {
+  right: 50%;
+}
+
 /*# sourceMappingURL=maps/app.css.map */
