@@ -1585,4 +1585,140 @@ picture {
   background-color: #efedeb;
 }
 
+/* line 6, src/scss/_components/homepage/_footer.scss */
+.footer__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/* line 11, src/scss/_components/homepage/_footer.scss */
+.footer__content {
+  width: 100%;
+}
+
+/* line 15, src/scss/_components/homepage/_footer.scss */
+.footer__social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 24, src/scss/_components/homepage/_footer.scss */
+.footer__social a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 28, src/scss/_components/homepage/_footer.scss */
+.footer__social a:not(:last-of-type) {
+  padding-bottom: 25px;
+}
+
+/* line 32, src/scss/_components/homepage/_footer.scss */
+.footer__social a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-right: 25px;
+}
+
+/* line 39, src/scss/_components/homepage/_footer.scss */
+.footer__social a span {
+  font-size: 18px;
+  color: #505050;
+}
+
+/* line 46, src/scss/_components/homepage/_footer.scss */
+.footer__title {
+  font-size: 30px;
+  color: #505050;
+  text-align: center;
+}
+
+/* line 52, src/scss/_components/homepage/_footer.scss */
+.footer__subtitle {
+  text-align: center;
+  font-size: 35px;
+  color: #d68162;
+  line-height: 3;
+  font-family: 'StylishClassyFont', sans-serif;
+}
+
+/* line 60, src/scss/_components/homepage/_footer.scss */
+.footer__line {
+  width: 130px;
+  height: 2px;
+  background-color: #c0bab1;
+  margin: 30px auto;
+}
+
+/* line 67, src/scss/_components/homepage/_footer.scss */
+.footer__menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+/* line 74, src/scss/_components/homepage/_footer.scss */
+.footer__menu a {
+  font-size: 18px;
+  color: #505050;
+}
+
+/* line 80, src/scss/_components/homepage/_footer.scss */
+.footer__copyright {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  background-color: #eec9b7;
+}
+
+/* line 87, src/scss/_components/homepage/_footer.scss */
+.footer__copyright p {
+  font-size: 18px;
+  color: #d68162;
+}
+
 /*# sourceMappingURL=maps/app.css.map */
