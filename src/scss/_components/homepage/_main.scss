@@ -38,24 +38,81 @@
 		}
 
 		h4 {
-			margin-left: 25px;
-			margin-right: 25px;
+			display: flex;
 			font-size: 60px;
 			font-weight: bold;
 			text-transform: uppercase;
 			letter-spacing: letter-spacing-convert(80, 100);
 
 			&:nth-of-type(1) {
-				color: #46c7dd;
+				a {
+					color: #46c7dd;
+
+					&:after {
+						background-color: #46c7dd;
+					}
+				}
 			}
 			&:nth-of-type(2) {
-				color: #e7717d;
+				a {
+					color: #e7717d;
+
+					&:after {
+						background-color: #e7717d;
+					}
+				}
 			}
 			&:nth-of-type(3) {
-				color: #d68162;
+				a {
+					color: #d68162;
+
+					&:after {
+						background-color: #d68162;
+					}
+				}
 			}
 			&:nth-of-type(4) {
-				color: #8c994c;
+				a {
+					color: #8c994c;
+
+					&:after {
+						background-color: #8c994c;
+					}
+				}
+			}
+
+			a {
+				position: relative;
+				padding-left: 25px;
+				padding-right: 25px;
+				text-shadow: 0 0 5px rgba(#000, 0);
+				@include transition(color, text-shadow);
+
+				&:hover {
+					color: #fff;
+					text-shadow: 0 0 5px rgba(#000, 0.15);
+					@include transition(color, text-shadow);
+
+					&:after {
+						height: 100%;
+						@include transition(height);
+					}
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 0;
+					@include transition(height);
+				}
+
+				span {
+					z-index: 2;
+					position: relative;
+				}
 			}
 		}
 
