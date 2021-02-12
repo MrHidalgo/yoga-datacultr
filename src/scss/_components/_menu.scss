@@ -12,10 +12,19 @@
 	width: 100%;
 	max-width: 480px;
 	height: 100%;
-	padding: 180px 95px 50px;
+	padding: 50px 95px;
 	box-shadow: -5 0 10px 0 rgba(#000, 0.25);
 	background-color: #ffffff;
+	font-size: 0;
 	@include transition(opacity, visibility, transform);
+
+	&:before {
+		content: '';
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
 
 	&.is-open {
 		opacity: 1;
@@ -25,11 +34,13 @@
 	}
 
 	&__nav {
-		display: flex;
-		flex-direction: column;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
 
 		&-link {
 			position: relative;
+			display: flex;
 
 			&:after {
 				content: '';

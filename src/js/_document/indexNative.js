@@ -7,12 +7,17 @@
 	* CALLBACK :: start
 	* ============================================= */
 	const pageFullHeight = () => {
-		$('#pagepiling').pagepiling({
+		$('#fullpage').fullpage({
 			sectionSelector: '.section',
+			fixedElements: '#header',
+			navigation: true,
+			verticalCentered: true,
+			responsiveWidth: 1024,
+			responsiveHeight: 768,
 			afterRender: function(){
 				setTimeout(() => {
-					$('#pagepiling').addClass('is-load');
-				}, 150);
+					$('#fullpage').addClass('is-load');
+				}, 300);
 			}
 		});
 	};
