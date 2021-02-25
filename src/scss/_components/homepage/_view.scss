@@ -37,12 +37,18 @@
 		font-size: 35px;
 		font-family: "StylishClassyFont", sans-serif;
 		color: rgb(255, 255, 255);
+		@include adaptive(767) {
+			font-size: 30px;
+		}
 	}
 
 	&__desc {
 		padding-bottom: 40px;
 		font-size: 40px;
 		color: #ffffff;
+		@include adaptive(767) {
+			font-size: 30px;
+		}
 	}
 
 	&__line {
@@ -54,6 +60,9 @@
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 40px;
+			@include adaptive(767) {
+				height: 55px;
+			}
 		}
 
 		&-2 {
@@ -77,6 +86,9 @@
 			font-size: 20px;
 			font-family: "Oswald", sans-serif;
 			color: #ffffff;
+			@include adaptive(767) {
+				font-size: 16px;
+			}
 
 			&:hover {
 				&:before,

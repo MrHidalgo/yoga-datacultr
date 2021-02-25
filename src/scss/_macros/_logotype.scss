@@ -12,6 +12,10 @@
 		display: block;
 		max-width: 100%;
 		height: auto;
+		@include adaptive(767) {
+			width: 100%;
+			max-width: 21px;
+		}
 	}
 }
 

@@ -17,6 +17,10 @@
 	background-color: #ffffff;
 	font-size: 0;
 	@include transition(opacity, visibility, transform);
+	@include adaptive(767) {
+		max-width: 90%;
+		padding: 50px;
+	}
 
 	&:before {
 		content: '';
@@ -74,6 +78,9 @@
 				font-weight: bold;
 				text-transform: uppercase;
 				letter-spacing: letter-spacing-convert(80, 100);
+				@include adaptive(767) {
+					font-size: 45px;
+				}
 
 				p {
 					z-index: 2;
@@ -130,6 +137,9 @@
 				line-height: 1.5;
 				text-transform: uppercase;
 				@include transition(transform, color);
+				@include adaptive(767) {
+					font-size: 20px;
+				}
 
 				&:hover {
 					color: #505050;

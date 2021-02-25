@@ -24,16 +24,27 @@
 		margin-right: auto;
 		margin-bottom: 25px;
 		background-color: #505050;
+		@include adaptive(767) {
+			height: 55px;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__title {
 		padding-bottom: 45px;
 		font-size: 40px;
 		color: #505050;
+		@include adaptive(767) {
+			padding-bottom: 30px;
+			font-size: 30px;
+		}
 
 		span {
 			font-family: 'StylishClassyFont', sans-serif;
 			font-size: 35px;
+			@include adaptive(767) {
+				font-size: 28px;
+			}
 		}
 	}
 
@@ -49,6 +60,9 @@
 		font-size: 50px;
 		text-transform: uppercase;
 		font-family: 'SamarkanNormal', sans-serif;
+		@include adaptive(767) {
+			font-size: 40px;
+		}
 	}
 
 	&__desc {
@@ -57,6 +71,9 @@
 		color: rgb(214, 129, 98);
 		//color: #ffffff;
 		font-weight: bold;
+		@include adaptive(767) {
+			font-size: 20px;
+		}
 	}
 
 	&__subtitle {
@@ -65,6 +82,9 @@
 		color: rgb(80, 80, 80);
 		text-transform: uppercase;
 		letter-spacing: letter-spacing-convert(20, 100);
+		@include adaptive(767) {
+			font-size: 18px;
+		}
 	}
 }
 

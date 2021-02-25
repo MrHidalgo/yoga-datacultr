@@ -2,6 +2,9 @@
 
 .shop {
 	background-color: #efedeb;
+	@include adaptive(767) {
+	  border-bottom: 1px solid #fff;
+	}
 
 	&__wrapper {
 		height: auto;
@@ -15,6 +18,9 @@
 		position: relative;
 		width: 100%;
 		height: 355px;
+		@include adaptive(767) {
+			height: 300px;
+		}
 
 		img {
 			@extend %imageResCoverAbs;
@@ -27,12 +33,19 @@
 		font-size: 35px;
 		font-family: "StylishClassyFont", sans-serif;
 		color: rgb(70, 199, 221);
+		@include adaptive(767) {
+			padding-bottom: 15px;
+			font-size: 30px;
+		}
 	}
 
 	&__subtitle {
 		padding-bottom: 20px;
 		font-size: 40px;
 		color: #505050;
+		@include adaptive(767) {
+			font-size: 30px;
+		}
 	}
 
 	&__line {
@@ -78,6 +91,9 @@
 				color: #fff;
 				letter-spacing: letter-spacing-convert(20, 100);
 				@include transition(color);
+				@include adaptive(767) {
+					font-size: 18px;
+				}
 			}
 		}
 	}

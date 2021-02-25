@@ -22,10 +22,22 @@
 }
 
 .section {
+	@include adaptive(767) {
+		height: auto !important;
+
+		> .fp-tableCell {
+			height: auto !important;
+		}
+	}
+
 	&__wrapper {
 		width: 100%;
 		height: 100%;
 		padding: 30px 95px;
+		@include adaptive(767) {
+			padding: 75px 41px;
+			height: auto;
+		}
 	}
 }
 

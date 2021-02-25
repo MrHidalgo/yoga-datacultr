@@ -2,6 +2,9 @@
 
 .news {
 	background-color: #bfb9b1;
+	@include adaptive(767) {
+		border-bottom: 1px solid #fff;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -15,11 +18,21 @@
 		max-width: 1110px;
 		margin-left: auto;
 		margin-right: auto;
+		@include adaptive(767) {
+		  flex-wrap: wrap;
+		}
 	}
 
 	&__col {
 		width: 100%;
 		max-width: calc((100% - 50px) / 2);
+		@include adaptive(767) {
+			max-width: 100%;
+
+			&:not(:last-of-type) {
+				padding-bottom: 75px;
+			}
+		}
 	}
 }
 

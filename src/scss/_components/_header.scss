@@ -7,11 +7,17 @@
 	left: 0;
 	width: 100%;
 	padding: 30px 30px 0;
+	@include adaptive(767) {
+		padding: 10px 10px 0;
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
+		@include adaptive(767) {
+			align-items: center;
+		}
 	}
 
 	.hamburger {
@@ -19,6 +25,12 @@
 		position: absolute;
 		top: 30px;
 		right: 30px;
+		@include adaptive(767) {
+			position: static;
+			top: 10px;
+			right: 10px;
+			padding: 0;
+		}
 	}
 }
 

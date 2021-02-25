@@ -25,7 +25,7 @@
 	
 	const downArrow = () => {
 		$('.main__arrow').on('click', (ev) => {
-			$('#pp-nav li').eq(1).find('a').trigger('click');
+			$('#fp-nav li').eq(1).find('a').trigger('click');
 		});
 	};
 	/*
@@ -45,6 +45,7 @@
 
 		// lib
 		initHamburger();
+		initSmoothScroll();
 		// ==========================================
 
 		// callback

@@ -65,6 +65,30 @@ var initPreventBehavior = function initPreventBehavior() {
 };
 
 /**
+ * @name initSmoothScroll
+ *
+ * @description Smooth transition to anchors to the block.
+ */
+var initSmoothScroll = function initSmoothScroll() {
+	var btnName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "[anchor-js]";
+	var animateSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 750;
+
+
+	$(btnName).on("click", function (e) {
+
+		var linkHref = $(e.currentTarget).attr('data-href'),
+		    headerHeight = $(".header").outerHeight() || 0,
+		    topHeightOffset = $(linkHref).offset().top;
+
+		if ($(window).width() < 768) {
+			$('body, html').animate({
+				scrollTop: topHeightOffset
+			}, animateSpeed);
+		}
+	});
+};
+
+/**
  * @description Document DOM ready.
  */
 (function () {
@@ -90,7 +114,7 @@ var initPreventBehavior = function initPreventBehavior() {
 
 	var downArrow = function downArrow() {
 		$('.main__arrow').on('click', function (ev) {
-			$('#pp-nav li').eq(1).find('a').trigger('click');
+			$('#fp-nav li').eq(1).find('a').trigger('click');
 		});
 	};
 	/*
@@ -109,6 +133,7 @@ var initPreventBehavior = function initPreventBehavior() {
 
 		// lib
 		initHamburger();
+		initSmoothScroll();
 		// ==========================================
 
 		// callback
