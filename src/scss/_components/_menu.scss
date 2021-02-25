@@ -41,6 +41,7 @@
 		&-link {
 			position: relative;
 			display: flex;
+			@include transition(transform, color);
 
 			&:after {
 				content: '';
@@ -128,6 +129,7 @@
 				font-weight: bold;
 				line-height: 1.5;
 				text-transform: uppercase;
+				@include transition(transform, color);
 
 				&:hover {
 					color: #505050;
