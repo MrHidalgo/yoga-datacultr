@@ -78,6 +78,10 @@
 		a {
 			font-size: 18px;
 			color: rgb(80, 80, 80);
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 

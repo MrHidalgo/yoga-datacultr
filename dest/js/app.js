@@ -78,7 +78,7 @@ var initPreventBehavior = function initPreventBehavior() {
 			fixedElements: '#header',
 			navigation: true,
 			verticalCentered: true,
-			responsiveWidth: 1024,
+			responsiveWidth: 768,
 			responsiveHeight: 768,
 			afterRender: function afterRender() {
 				setTimeout(function () {
