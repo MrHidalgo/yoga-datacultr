@@ -20,7 +20,7 @@
 		flex-direction: column;
 		width: 100%;
 		max-width: 300px;
-		padding-bottom: 50px;
+		padding-bottom: 40px;
 		padding-left: 40px;
 		margin-left: auto;
 		margin-right: auto;
@@ -30,12 +30,13 @@
 			align-items: center;
 
 			&:not(:last-of-type) {
-				padding-bottom: 25px;
+				padding-bottom: 15px;
 			}
 			
 			img {
 				display: block;
-				max-width: 100%;
+				width: 100%;
+				max-width: 40px;
 				height: auto;
 				margin-right: 25px;
 				@include adaptive(767) {

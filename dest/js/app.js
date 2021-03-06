@@ -108,6 +108,25 @@ var initSmoothScroll = function initSmoothScroll() {
 				setTimeout(function () {
 					$('#fullpage').addClass('is-load');
 				}, 300);
+			},
+			onLeave: function onLeave(origin, destination, direction) {
+				if (destination > 1) {
+					$('#header .logo').animate({ opacity: 0 }, 550);
+				} else {
+					$('#header .logo').animate({ opacity: 1 }, 550);
+				}
+
+				if (destination === 2) {
+					$.each($('.about__content > *'), function (idx, el) {
+						$(el).addClass(' animate__animated animate__fadeInUp');
+					});
+				}
+
+				if (destination === 6) {
+					$.each($('.view__content > *'), function (idx, el) {
+						$(el).addClass(' animate__animated animate__fadeInUp');
+					});
+				}
 			}
 		});
 	};
